@@ -8,7 +8,6 @@ public class InstituteImporter {
 		Metadata instituteMetadata = new Metadata();
 		
 		Field idMetadata = instituteMetadata.new Field();
-		
 		idMetadata.setAttribute("id");
 		idMetadata.setColumn("Identifier");
 		idMetadata.setType("int");
@@ -29,9 +28,9 @@ public class InstituteImporter {
 		
 		Record record = new Record();
 				
-		record.addField("Identifier", 25);
-		record.addField("Institute Name", "Brand New Institute");
-		record.addField("Site Name", "New Site");
+		record.addRecord("Identifier", 25);
+		record.addRecord("Institute Name", "Brand New Institute");
+		record.addRecord("Site Name", "New Site");
 
 		Transformer transformer = new DefaultTransformer(instituteMetadata);
 		transformer.transform(record, InstituteDetail.class);

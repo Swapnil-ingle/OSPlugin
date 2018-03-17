@@ -10,7 +10,7 @@ public class Metadata {
 		fields.add(field);
 	}
 	
-	public class Field {
+	class Field {
 		private String attribute;
 		
 		private String column;
