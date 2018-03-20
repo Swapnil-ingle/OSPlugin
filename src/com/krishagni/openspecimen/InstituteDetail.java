@@ -45,8 +45,8 @@ public class InstituteDetail {
 	public void setUsersCount(int usersCount) {
 		this.usersCount = usersCount;
 	}
-/*
-	public static InstituteDetail from(Institute institute) {
+
+/*	public static InstituteDetail from(Institute institute) {
 		InstituteDetail detail = new InstituteDetail();
 		detail.setId(institute.getId());
 		detail.setName(institute.getName());
@@ -66,6 +66,6 @@ public class InstituteDetail {
 		}
 
 		return result;
-*/		
+		*/
 	}
 

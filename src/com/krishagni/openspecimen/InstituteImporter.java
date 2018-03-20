@@ -4,36 +4,33 @@ import com.krishagni.openspecimen.Metadata.Field;
 
 public class InstituteImporter {
 
-	public static void main (String[] args) {			
+	public static void main (String[] args) throws Exception {			
 		Metadata instituteMetadata = new Metadata();
 		
 		Field idMetadata = instituteMetadata.new Field();
 		idMetadata.setAttribute("id");
 		idMetadata.setColumn("Identifier");
-		idMetadata.setType("int");
+		idMetadata.setType("Long");
 		instituteMetadata.addField(idMetadata);
-
 		
 		Field nameMetadata = instituteMetadata.new Field();
 		nameMetadata.setAttribute("name");
 		nameMetadata.setColumn("Institute Name");
 		nameMetadata.setType("String");
 		instituteMetadata.addField(nameMetadata);
-		
-		Field siteMetadata = instituteMetadata.new Field();
-		siteMetadata.setAttribute("site");
-		siteMetadata.setColumn("Site Name");
-		siteMetadata.setType("String");
-		instituteMetadata.addField(siteMetadata);
-		
+
 		Record record = new Record();
-				
-		record.addRecord("Identifier", 25);
-		record.addRecord("Institute Name", "Brand New Institute");
-		record.addRecord("Site Name", "New Site");
+
+		record.add("Identifier", 25L);
+		record.add("Institute Name", "Brand New Institute");
 
 		Transformer transformer = new DefaultTransformer(instituteMetadata);
-		transformer.transform(record, InstituteDetail.class);
+		InstituteDetail detail = transformer.transform(record,InstituteDetail.class);
+		//
+		//Testing Output
+		//
+		System.out.println(detail.getId());
+		System.out.println(detail.getName());
 	}
 
 }
