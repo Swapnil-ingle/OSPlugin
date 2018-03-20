@@ -1,4 +1,4 @@
-package com.krishagni.openspecimen;
+package com.krishagni.openspecimen.plugin.core;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -10,7 +10,11 @@ public class Metadata {
 		fields.add(field);
 	}
 	
-	class Field {
+	public List<Field> getField() {
+		return fields;
+	}
+	
+	public class Field {
 		private String attribute;
 		
 		private String column;

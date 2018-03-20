@@ -1,6 +1,8 @@
-package com.krishagni.openspecimen;
+package com.krishagni.openspecimen.plugin.core;
 
-import com.krishagni.openspecimen.Metadata.Field;
+import com.krishagni.openspecimen.plugin.core.Metadata.Field;
+import com.krishagni.openspecimen.plugin.transformer.Transformer;
+import com.krishagni.openspecimen.plugin.transformer.impl.DefaultTransformer;
 
 public class InstituteImporter {
 

@@ -1,4 +1,4 @@
-package com.krishagni.openspecimen;
+package com.krishagni.openspecimen.plugin.core;
 
 import java.util.Map;
 import java.util.HashMap;
