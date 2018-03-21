@@ -12,7 +12,7 @@ import com.krishagni.openspecimen.plugin.transformer.Transformer;
 public class DefaultTransformer implements Transformer {
 	private Metadata metadata;
 	
-	ObjectMapper objMapper = new ObjectMapper();
+	private ObjectMapper objMapper = new ObjectMapper();
 	
 	public DefaultTransformer(Metadata metaData) {
 		this.metadata = metaData;
