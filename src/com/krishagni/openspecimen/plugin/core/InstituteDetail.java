@@ -1,14 +1,17 @@
 package com.krishagni.openspecimen.plugin.core;
 
-import java.util.ArrayList;
-import java.util.List;
-
+import java.sql.Time;
+import java.util.Date;
 
 public class InstituteDetail {
 
 	private Long id;
 
 	private String name;
+	
+	private Date date;
+	
+	private Time time;
 
 	private String activityStatus;
 
@@ -17,7 +20,7 @@ public class InstituteDetail {
 	public Long getId() {
 		return id;
 	}
-
+	
 	public void setId(Long id) {
 		this.id = id;
 	}
@@ -44,6 +47,22 @@ public class InstituteDetail {
 
 	public void setUsersCount(int usersCount) {
 		this.usersCount = usersCount;
+	}
+
+	public Date getDate() {
+		return date;
+	}
+
+	public void setDate(Date date) {
+		this.date = date;
+	}
+
+	public Time getTime() {
+		return time;
+	}
+
+	public void setTime(Time time) {
+		this.time = time;
 	}
 
 /*	public static InstituteDetail from(Institute institute) {

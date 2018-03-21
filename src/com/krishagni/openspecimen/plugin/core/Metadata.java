@@ -10,7 +10,7 @@ public class Metadata {
 		fields.add(field);
 	}
 	
-	public List<Field> getField() {
+	public List<Field> getFields() {
 		return fields;
 	}
 	

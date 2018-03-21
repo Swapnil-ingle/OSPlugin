@@ -10,8 +10,12 @@ public class Record {
 		record.put(column, value);
 	}
 
-	public Map<String, Object> get() {
+	public Map<String, Object> getMap() {
 		return record;
+	}
+	
+	public Object getValue(String column) {
+		return record.get(column);
 	}
 	
 }

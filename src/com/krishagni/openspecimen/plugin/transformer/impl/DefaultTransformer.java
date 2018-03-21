@@ -15,17 +15,16 @@ public class DefaultTransformer implements Transformer {
 	ObjectMapper objMapper = new ObjectMapper();
 	
 	public DefaultTransformer(Metadata metaData) {
-		this.metadata = metaData;	
+		this.metadata = metaData;
 	}
 
 	public <T> T transform(Record record, Class<T> objectType){
 		Map<String, Object> attrValueMap = new HashMap<>();
-		Map<String, Object> rowData = record.get();
+		
+		for (Field columnMetadata : metadata.getFields()) {
+			if (record.getValue(columnMetadata.getColumn()) != null) {
 
-		for (Field columnMetadata : metadata.getField()) {
-			if (rowData.get(columnMetadata.getColumn()) != null) {
-
-				attrValueMap.put(columnMetadata.getAttribute(), rowData.get(columnMetadata.getColumn()));
+				attrValueMap.put(columnMetadata.getAttribute(), record.getValue(columnMetadata.getColumn()));
 		
 //				rowData.remove(columnMetadata.getColumn());
 			} else {
