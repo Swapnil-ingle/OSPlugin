@@ -17,7 +17,7 @@ public class Record {
 	public Object getValue(String column) {
 		return record.get(column);
 	}
-	
+
 }
 
 

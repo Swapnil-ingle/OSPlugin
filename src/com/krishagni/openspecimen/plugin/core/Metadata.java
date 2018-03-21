@@ -21,6 +21,8 @@ public class Metadata {
 		
 		private String type;
 		
+		private String format;
+		
 		private List<Field> fields;
 
 		public String getAttribute() {
@@ -53,6 +55,14 @@ public class Metadata {
 
 		public void setFields(List<Field> fields) {
 			this.fields = fields;
+		}
+
+		public String getFormat() {
+			return format;
+		}
+
+		public void setFormat(String format) {
+			this.format = format;
 		}
 	}
 
